@@ -1,0 +1,52 @@
+<form #loginform="ngForm" (ngSubmit)="register()">
+  <!-- <div class="imgcontainer">
+  
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+  
+    </div> -->
+  
+  <div class="container">
+  
+      <h2>Registration Page</h2>
+  
+      <!-- <label for="uname"><b>Username</b></label>
+  
+      <input type="text" placeholder="Enter Username" name="uname" required [(ngModel)]="users.username"><br><br> -->
+      <label for="name"><b>Username</b></label>
+      <input type="text" id="name" name="name" class="form-control"
+      required minlength="4" placeholder="Eneter Username"
+      [(ngModel)]="users.username" #name="ngModel">
+      <div *ngIf="name.errors?.['required']">
+        Name is required.
+      </div>
+      <div *ngIf="name.errors?.['minlength']">
+        Name must be at least 4 characters long.
+      </div>
+  <!-- <label for="psw"><b>Password</b></label>
+  
+      <input type="password" placeholder="Enter Password" name="psw" required [(ngModel)]="users.password"><br><br> -->
+      <label for="psw"><b>Password</b></label>
+        <input type="password" id="password" name="password" class="form-control"
+        required minlength="4" placeholder="Enter valid Password"
+        [(ngModel)]="users.password" #name="ngModel">
+        <div *ngIf="name.errors?.['required']">
+          password is required.
+        </div>
+        <div *ngIf="name.errors?.['minlength']">
+          password must be at least 4 characters long.
+        </div>
+      <label for="Email"><b>EMailid</b></label>
+  
+      <input type="text" placeholder="Enter Email" name="Email" required [(ngModel)]="users.AuthorEMailId"><br><br>
+  
+   <button type="submit">Register</button>
+  
+      <label>
+  
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+  
+      </label>
+  
+    </div>
+  
+  </form>

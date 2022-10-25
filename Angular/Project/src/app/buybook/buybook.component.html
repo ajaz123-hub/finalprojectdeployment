@@ -1,0 +1,20 @@
+<!-- <p>buybook works!</p> -->
+<div class="container col-md-6">
+    <h1 style="color:black">BuyBook Page</h1>
+    <form (ngSubmit)="buyBook()">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">BookId</label>
+        <input type="text"  class="form-control" id ="bookId" name="bookId"  [(ngModel)]= "book.bookId">  
+       </div>  <br/>
+       <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <input type="text"  class="form-control" id ="name" name="name" [(ngModel)]= "book.name">  
+       </div> <br/>
+       <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Emailid</label>
+        <input type="text"  class="form-control" id ="emailId" name="emailId" [(ngModel)]= "book.emailId">  
+       </div> <br/>   
+       <button type="Signup" class="btn btn-primary">submit</button>
+    </form>
+ 
+  </div>

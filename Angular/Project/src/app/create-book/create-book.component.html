@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div >
+    <h2>Enter the fields</h2>
+    <label class="form-label" for="form12">bookId</label>
+    <input type="text" id="form12" class="form-control"  [(ngModel)]="book.bookId"/>
+    <label class="form-label" for="form12">Book Title </label>
+    <input type="text" id="form12" class="form-control"  [(ngModel)]="book.title"/>
+    <label class="form-label" for="form12">AuthorId</label>
+    <input type="text" id="form12" class="form-control"  [(ngModel)]="book.authorId"/>
+
+    <label class="form-label" for="author">AuthorName</label>
+    <input type="text" id="author" class="form-control" [(ngModel)]="book.authorName"/>
+    <label class="form-label" for="category">Category</label>
+    <select [(ngModel)] ='book.category' type="text" id="category" class="form-control"  style="width: 76.5%;">
+        <option value="belive">Belive</option>
+        <option value="vision">Vision</option>
+        <option value="wings">Wings</option>
+        <option value="life">Life</option>
+        <option value="love">Love</option>
+        <option value="adventure">Adventure</option>
+        <option value="horror">Horror</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="action">Action</option>
+      </select>
+    <label class="form-label" for="price">Price</label>
+    <input type="number" id="price" class="form-control"  [(ngModel)]="book.price"/>
+    <label class="form-label" for="publisher">Publisher</label>
+    <input type="text" id="publisher" class="form-control"  [(ngModel)]="book.publisher"/>
+    <label class="form-label" for="publisher">Active</label>
+    <input type="text" id="publisher" class="form-control"  [(ngModel)]="book.active"/>
+    <label  for="publishedDate" class="form-label">publishedDate</label>
+    <input [(ngModel)]='book.publishedDate'  type="date" id="publishedDate" class="form-control">
+    <!-- <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+    <mat-datepicker #datepicker></mat-datepicker> -->
+    
+    <br>
+    <button (click)='createBook()' class='btn btn-primary'> Save Book</button>
+    <br><br>
+    <!-- <button routerLink="/bookslist" class='btn btn-dark' style='float:end;'> Next </button> -->
+    
+</div>
+</body>
+</html>

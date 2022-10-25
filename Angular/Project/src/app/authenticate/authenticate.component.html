@@ -1,0 +1,76 @@
+<!-- <p>authenticate works!</p>/ -->
+<form #loginform="ngForm" (ngSubmit)="GetToken()">
+
+    <!-- <div class="imgcontainer">
+
+   
+
+        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+
+   
+
+      </div> -->
+
+   
+
+    <div class="container">
+
+   
+
+        <h2>Authenticate</h2>
+
+        <label for="psw"><b>Username</b></label>
+
+        <input type="text" id="name" name="name" class="form-control"
+
+        required minlength="4" placeholder="Eneter Username"
+
+        [(ngModel)]="auth.username" #name="ngModel">
+
+        <div *ngIf="name.errors?.['required']">
+
+          Name is required.
+
+        </div>
+
+        <div *ngIf="name.errors?.['minlength']">
+
+          Name must be at least 4 characters long.
+
+        </div>
+        <label for="psw"><b>Password</b></label>
+
+        <input type="password" id="password" name="password" class="form-control"
+
+        required minlength="4" placeholder="Enter valid Password"
+
+        [(ngModel)]="auth.password" #name="ngModel">
+
+        <div *ngIf="name.errors?.['required']">
+
+          password is required.
+
+        </div>
+
+        <div *ngIf="name.errors?.['minlength']">
+
+          password must be at least 4 characters long.
+
+        </div>
+
+       
+
+     <button type="submit">getToken</button>
+        <label>
+
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+ 
+
+        </label>  
+      </div>  
+
+    </form>
+
+
+
+

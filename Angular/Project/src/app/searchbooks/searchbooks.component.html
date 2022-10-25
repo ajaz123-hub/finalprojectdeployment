@@ -1,0 +1,32 @@
+<!-- <p>searchbooks works!</p> -->
+<html>
+
+  <body></body>
+
+<div class="container">
+
+  <div>
+
+    Category : <input type="text" name="Category" [(ngModel)]="category" ><br>
+
+    authorName : <input type="text" name="Author" [(ngModel)]="authorName"><br>
+
+    Price: <input type="text" name="Price" [(ngModel)]="price"><br>
+
+    Publisher : <input type="text" name="publisher" [(ngModel)]="publisher"><br>
+
+  </div>
+
+  <button (click)=SearchBook() class="btn btn-success">
+
+    Search
+
+  </button>
+
+ 
+
+</div><br><br>
+
+<app-searchbooksres *ngIf="books" [book]="books"></app-searchbooksres>
+
+</html>

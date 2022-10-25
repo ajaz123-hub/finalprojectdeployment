@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <table class="table table-striped table-hover" style="background-color:white">
+    <thead style="background-color:aquamarine">
+      <td>bookId</td>
+    <td>title</td>
+    <td>authorName</td>
+    <td>category</td>
+    <td>Price</td>
+    <td>Publisher</td>
+    <td>PublishedDate</td>
+    <td>active</td>
+    <td></td>
+    </thead>
+  
+      <tr *ngFor = 'let book of books'>
+        <td>{{book.bookId}}</td>
+    <td>{{book.title}}</td>
+    <td>{{book.authorName}}</td>
+    <td>{{book.category}}</td>
+    <td>{{book.price}}</td>
+    <td>{{book.publisher}}</td>
+    <td>{{book.publishedDate}}</td>
+    <td>{{book.active}}</td>
+    <!-- <td><button (click) ='deleteBook(book.id)'>Delete Book</button></td> -->
+      </tr>
+  
+  <br>
+  <!-- <button routerLink="/createbook" class='btn btn-dark' > Back </button> -->
+</table>
+</body>
+</html>

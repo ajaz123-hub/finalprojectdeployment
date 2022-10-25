@@ -1,0 +1,15 @@
+package com.digitalbooks.authorservice.config;
+
+public class WebMvcConfigurer {
+	@Bean
+		public WebMvcConfigurer configure() {
+			return new WebMvcConfigurer() {
+				@Override
+				public void addCorsMappings(CorsRegistry registry) {
+			registry.addMapping("/*").allowedOrigins("http://localhost:9090");
+				}
+				
+			};
+		}
+}
+
